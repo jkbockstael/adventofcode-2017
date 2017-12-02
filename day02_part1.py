@@ -13,5 +13,6 @@ def parse_line(line):
 def checksum(rows):
     return sum([max(row) - min(row) for row in rows])
 
-rows = parse_input(sys.stdin.readlines())
-print(checksum(rows))
+if __name__ == '__main__':
+    rows = parse_input(sys.stdin.readlines())
+    print(checksum(rows))
