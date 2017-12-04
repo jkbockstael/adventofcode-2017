@@ -2,7 +2,6 @@
 # http://adventofcode.com/2017/day/3
 
 import sys
-import math
 
 # n such as n^2 < cell and (n+2)^2 >= x
 def previous_corner_root(cell):
