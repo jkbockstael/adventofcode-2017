@@ -7,7 +7,7 @@ import math
 # n such as n^2 < cell and (n+2)^2 >= x
 def previous_corner_root(cell):
     n = 3
-    while ((n + 2)**2 < cell) or (n**2 >= cell):
+    while ((n + 2)**2 < cell):
         n = n + 2
     return n
     
