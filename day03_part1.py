@@ -1,8 +1,6 @@
 # Advent of Code 2017 - Day 3 - Spiral Memory
 # http://adventofcode.com/2017/day/3
 
-import sys
-
 # n such as n^2 < cell and (n+2)^2 >= x
 def previous_corner_root(cell):
     n = 3
@@ -29,4 +27,4 @@ def manhattan_distance(cell):
         else:
             return offset
 
-print(manhattan_distance(int(sys.stdin.readline())))
+print(manhattan_distance(int(input())))
