@@ -2,16 +2,10 @@
 # http://adventofcode.com/2017/day/5
 
 import sys
+from day05_part1 import run
 
-def run(program):
-    steps = 0
-    pc = 0
-    while pc >= 0 and pc < len(program):
-        target = pc + program[pc]
-        program[pc] += -1 if program[pc] >= 3 else 1
-        pc = target
-        steps = steps + 1
-    return steps
+def change_jump(jump):
+    return jump -1 if jump >= 3 else jump +1
 
 program = map(int, sys.stdin.readlines())
-print(run(program))
+print(run(change_jump, program))
