@@ -8,8 +8,9 @@ def words(separator):
         return line.rstrip().split(separator)
     return words_inner
 
-def valid(words):
+def unique(words):
     return len(words) == len(set(words))
 
-passphrases = sys.stdin.readlines()
-print(len(list(filter(valid, map(words(' '), passphrases)))))
+if __name__ == '__main__':
+    passphrases = sys.stdin.readlines()
+    print(len(list(filter(unique, map(words(' '), passphrases)))))
