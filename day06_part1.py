@@ -13,14 +13,16 @@ def reallocate(memory):
         value = value - 1
     return memory
 
-def steps_before_cycle(memory):
+def reallocate_until_cycle(memory):
     steps = 0
     visited = []
     while memory not in visited:
         visited.append(memory)
         memory = reallocate(memory[:])
         steps = steps + 1
-    return steps
+    return steps, memory
 
-memory = [int(x) for x in re.split('\s+', input())]
-print(steps_before_cycle(memory))
+if __name__ == '__main__':
+    memory = [int(x) for x in re.split('\s+', input())]
+    steps, _ = reallocate_until_cycle(memory)
+    print(steps)
