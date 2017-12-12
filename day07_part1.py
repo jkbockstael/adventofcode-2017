@@ -24,5 +24,6 @@ def root_node(tree):
             nodes.remove(child)
     return nodes[0]
 
-tree = parse_input(sys.stdin.readlines())
-print(root_node(tree))
+if __name__ == '__main__':
+    tree = parse_input(sys.stdin.readlines())
+    print(root_node(tree))
