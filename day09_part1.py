@@ -4,6 +4,7 @@
 def stream_score(line):
     score = 0
     depth = 0
+    garbage_count = 0
     in_garbage = False
     skip_char = False
     for char in line:
@@ -22,6 +23,10 @@ def stream_score(line):
                 skip_char = True
             elif char == '>':
                 in_garbage = False
-    return score
+            else:
+                garbage_count = garbage_count + 1
+    return score, garbage_count
 
-print(stream_score(input()))
+if __name__ == '__main__':
+    score, _ = stream_score(input())
+    print(score)
